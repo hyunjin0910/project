@@ -1,3 +1,25 @@
-.navbar{
+body{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: skyblue;
+    padding: 8px 12px;
+}
+
+.navbar__logo{
+    font-size: 24px;
+    color: white;
+}
+
+.navbar__logo i{
+    color: pink;
 }
