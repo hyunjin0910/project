@@ -90,4 +90,9 @@ a {
     .navbar__toggleBtn{
         display: block;
     }
+
+    .navbar__menu.active,
+    .navbar__icons.active{
+        display: flex;
+    }
 }
