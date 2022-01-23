@@ -26,10 +26,21 @@ a {
 
 .navbar__menu{
     display: flex;
-    list-style: none;  // 리스트 점을 없애준다
+    list-style: none;  /*리스트 점을 없애준다*/
     padding-left: 0;
 }
 
 .navbar__menu li{
-    padding: 8px 12px;
+    padding: 8px 12px; /*마진대신 패딩을 쓴 이유는 버튼 클릭 영역을 넓힐 수 있어서 */
+
+}
+
+.navbar__icons{
+    list-style: none;
+    display: flex;
+    color: white;
+}
+
+.navbar__icons li{
+    padding: 8px 12px; /*사이에 ','를 넣으면 안된다 */
 }
