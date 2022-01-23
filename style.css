@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: whitesmoke;
 }
 
 a {
@@ -11,7 +13,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: skyblue;
+    background-color: #154734;
     padding: 8px 12px;
 }
 
@@ -35,6 +37,12 @@ a {
 
 }
 
+.navbar__menu li:hover{
+    background-color: grey;
+    border-radius: 4px;
+
+
+}
 .navbar__icons{
     list-style: none;
     display: flex;
