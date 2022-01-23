@@ -17,10 +17,19 @@ a {
 
 .navbar__logo{
     font-size: 24px;
-    color: pink;
+    color: white;
 }
 
 .navbar__logo i{
     color: pink;
 }
 
+.navbar__menu{
+    display: flex;
+    list-style: none;  // 리스트 점을 없애준다
+    padding-left: 0;
+}
+
+.navbar__menu li{
+    padding: 8px 12px;
+}
