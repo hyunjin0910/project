@@ -4,10 +4,10 @@
 Full Size
 ![Navigation bar_full](https://user-images.githubusercontent.com/95457808/150668635-4404c34e-9f30-4c45-bd35-960adea18a48.jpg)
 
-Small Siz
+Small Size
 ![Navigation bar_small](https://user-images.githubusercontent.com/95457808/150668644-ef3f49f3-683f-4fa1-8e58-fded3129fcb2.jpg)
 
---------------------------------
+
 ## 개념 익히기
 **1) display: flex**   
 : items들이 가로로 늘어지게 된다 
