@@ -12,18 +12,28 @@
 
 <input type = "text"> 
 
-<button>입력</button>
+<button>입력</button>   
 
 <script>
     const number = parseInt(prompt('몇 명이 참가하나요?'),10) // 입력은 다 문자로 받아오기 때문
     const $button = document.querySelector('button');
     const $input = document.querySelector('input');
+    const $word = document.querySelector('#word');
+
+    let word;
+    let newWord;
 
     const onClickButton = () =>{
+        if(!word){//비어있다면
+            word = newWord;
+            $word.textContent = word; //변수가 바뀌면 화면도 바꾸어주어야 한다
+            $input.value = '';
+        }
         console.log('버튼 클릭');
     }
 
     const onInput =(event)=>{
+        newWord = event.target.value
         console.log('단어 입력', event.target.value)
     }
 
