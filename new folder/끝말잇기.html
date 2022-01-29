@@ -28,7 +28,15 @@
             word = newWord;
             $word.textContent = word; //변수가 바뀌면 화면도 바꾸어주어야 한다
             $input.value = '';
+            let order = Number($order.textContent)
+        }else{
+            if(word[word.length-1]=== newWord[0]){
+                word = newWord;
+                $word.textContent = word; 
+                $input.value = '';
+            }
         }
+        
         console.log('버튼 클릭');
     }
 
