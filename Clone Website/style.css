@@ -13,6 +13,7 @@ body{
     font-weight: 300;
     color: #FFFEF2;
     background-color: #FFFEF2;
+    overflow-x: hidden;  /* 오른쪽 여백이 안보이게 해준다 */
 }
 
 #banner{
@@ -73,13 +74,14 @@ body{
     height: 100vh; */
     /* overflow: hidden;
     margin: 0px auto; */
-    position: relative;
+    position: absolute;
   }
 
 video{
     width: 100%;
     height: 85vh;
     object-fit: cover;
+    background-size: cover;
 
 }
 .intro__logo {
@@ -115,7 +117,7 @@ p{
 .intro__detail{
     position: absolute;
     left: 20%;
-    bottom: 30%;
+    bottom: 35%;
     z-index: 2000;
     
 }
