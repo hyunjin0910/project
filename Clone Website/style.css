@@ -12,6 +12,7 @@ body{
 
 .banner__content{
     display: inline;
+    font-size: 14px;
 }
 
 #navbar{
@@ -20,18 +21,30 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: left;
-    padding: 8px 12px;
+   
 }
 
 .navbar__menu{
     display: flex;
     list-style: none;
+    font-size: 16px;
+    justify-content: space-evenly;
+}
+
+.navbar__menu li{
+    padding: 8px 12px;
 }
 
 .navbar__customer{
     display: flex;
     list-style: none;
+    font-size: 16px;
 }
+
+.navbar__customer li{
+    padding: 8px 12px;
+}
+
 .intro__video{
     width: 10%;
     height: 10%;
