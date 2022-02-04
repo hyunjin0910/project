@@ -111,18 +111,23 @@ p{
 }
 .intro__detail{
     position: absolute;
-    width: 100%;
     left: 15%;
     bottom: 30%;
     z-index: 2000;
-    /* transform: translate(-100%,-100%); */
+    
 }
 
 .intro__detail a{
     font-size: 14px;
-    padding: 19px 55px;
     display: block;
     color: #FFFEF2;
-    font-weight: 400;
     text-decoration: none;
+    padding: 19px 40px;
+    border: 1px solid #FFFEF2;
+}
+
+.intro__detail a:hover{
+    color: #252525;
+    font-weight: 400;
+    background-color: #FFFEF2;
 }
