@@ -1,7 +1,12 @@
 @font-face {
     font-family: 'Suisse';
-    src: url('./forCSS/SuisseIntlTrial-Medium.otf') format('otf');
+    src: url('./forCSS/SuisseIntlTrial-UltraLight.otf') format('otf');
 } 
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
 
 body{
     font-family: 'Suisse', sans-serif;
@@ -34,6 +39,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: left;
+    position: relative;
    
 }
 
@@ -42,10 +48,11 @@ body{
     list-style: none;
     font-size: 16px;
     justify-content: space-evenly;
+    padding-left: 30px;
 }
 
 .navbar__menu li{
-    padding: 12px 12px;
+    padding: 30px 12px;
     cursor: pointer;
 }
 
@@ -53,14 +60,69 @@ body{
     display: flex;
     list-style: none;
     font-size: 16px;
+    padding-right: 30px;
 }
 
 .navbar__customer li{
-    padding: 12px 12px;
+    padding: 30px 12px;
     cursor: pointer;
 }
 
-.intro__video{
-    width: 10%;
-    height: 10%;
+#intro {
+    /* width: 100%;
+    height: 100vh; */
+    /* overflow: hidden;
+    margin: 0px auto; */
+    position: relative;
+  }
+
+video{
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+
+}
+.intro__logo {
+    z-index: 1000;
+    width: 80px;
+    position: absolute;
+  }
+
+.intro__content {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 15%;
+    z-index: 1000;
+  }
+h2{
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+
+h1{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+p{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.intro__detail{
+    position: absolute;
+    width: 100%;
+    left: 15%;
+    bottom: 30%;
+    z-index: 2000;
+    /* transform: translate(-100%,-100%); */
+}
+
+.intro__detail a{
+    font-size: 14px;
+    padding: 19px 55px;
+    display: block;
+    color: #FFFEF2;
+    font-weight: 400;
+    text-decoration: none;
 }
