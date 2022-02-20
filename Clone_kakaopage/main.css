@@ -76,7 +76,7 @@
     display: flex;
     justify-content: space-between;
     z-index: 2;
-    background-color: brown;
+    color: var(--main-white);
     margin-top: 28rem;
     position: absolute;
     padding: 0 5%;
@@ -92,7 +92,7 @@
     width: 100%;
     margin-top: 31.6rem;
     padding: 1rem;
-    background-color: yellowgreen;
+    background-color: var(--accent-color);
     z-index: 1;
     text-align: center;
 } 

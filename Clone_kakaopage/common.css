@@ -90,3 +90,8 @@ button{
 .category,.waiting{
     display: block;
 }
+
+/* 임시 컨텐츠 숨기기 */
+.category,.waiting{
+    display: none;
+}
