@@ -146,9 +146,15 @@
 
 .days button{
     padding: 0 20px;
+    color: var(--dark-grey);
 }
 
-.days__Mon{
+/* .days__Mon{
+    border-bottom: 4px solid var(--accent-color);
+    color: var(--text-color);
+}  */
+
+.days button:first-child{
+    color: var(--text-color);
     border-bottom: 4px solid var(--accent-color);
 }
-
