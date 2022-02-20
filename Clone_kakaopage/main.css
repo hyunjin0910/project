@@ -26,12 +26,16 @@
 .navbar__menu button{
     padding: 2rem 1.5rem 0 1.5rem;
     font-size: var(--largefont);
-    /* border-bottom: 4px solid var(--accent-color); */
+    
+}
+
+.navbar #nav__toon{
+    border-bottom: 4px solid var(--accent-color);
 }
 /*3. 장르 */
-.contents__genre{
+/* .contents__genre{
     display: none;
-}
+} */
 
 
 /* 4. 배너 */
