@@ -1,0 +1,138 @@
+
+/*1. 헤더 세팅*/
+.item{
+    padding-top: 2rem;
+}
+
+/*검색창*/
+#searchInput{
+    border: 1px solid #999999;
+    border-radius: 15px;
+}
+.stage img{
+    width: 5rem;
+}
+/*로그인 세팅*/
+.user{
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--largefont);
+    color: #999999;
+    border: 0;
+    padding-left:0; margin-left:0;
+}
+/* 2. 네비바 세팅 */
+
+.navbar__menu button{
+    padding: 2rem 1.5rem 0 1.5rem;
+    font-size: var(--largefont);
+    /* border-bottom: 4px solid var(--accent-color); */
+}
+/*3. 장르 */
+.contents__genre{
+    display: none;
+}
+
+
+/* 4. 배너 */
+.banner{
+    height: 35rem;
+    position: relative;
+    z-index: -5;
+    margin-top: 1rem;
+}
+
+.banner__image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.banner__button{
+    padding: 0 1rem;
+    width: 100%;
+    margin-top: 15rem;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+.banner__button button{
+    background-color:transparent;
+    border: none;
+}
+
+.underbtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: brown;
+    margin-top: 28rem;
+    position: absolute;
+    padding: 0 5%;
+}
+
+.count{
+    color: var(--background-color);
+    font-size: 2rem;
+}  
+
+.comment{
+    position: absolute;
+    width: 100%;
+    margin-top: 31.6rem;
+    padding: 1rem;
+    background-color: yellowgreen;
+    z-index: 1;
+    text-align: center;
+} 
+
+/*5. 카테고리 */
+
+.category__ele{
+    height: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 1rem 1rem;
+}
+
+ .category__ele li{
+    margin: 1rem;
+    padding-top: 1.7rem;
+    background-color: grey;
+    text-align: center;
+}
+
+/*6. 기다리면 무료 */
+
+.waiting__contents .wc{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    height: 5em;
+}
+
+/*7. 요일별 웹툰 */
+.daily__contents{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin: 1rem 1rem;
+    column-gap: 2rem;
+    height: 25rem;
+}
+
+.daily__contents .content{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.daily__contents .content .c_img{
+    height: 70%;
+    background-color: skyblue;
+}
+
