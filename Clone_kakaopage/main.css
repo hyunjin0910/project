@@ -127,8 +127,8 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(2,1fr);
-    margin: 1rem 1rem;
-    column-gap: 2rem;
+    margin: 1rem 1.5rem;
+    column-gap: 1.5rem;
     height: 25rem;
 }
 
@@ -142,5 +142,13 @@
 .daily__contents .content .c_img{
     height: 70%;
     background-color: skyblue;
+}
+
+.days button{
+    padding: 0 20px;
+}
+
+.days__Mon{
+    border-bottom: 4px solid var(--accent-color);
 }
 
