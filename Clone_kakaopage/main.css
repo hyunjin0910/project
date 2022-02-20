@@ -6,7 +6,7 @@
 
 /*검색창*/
 #searchInput{
-    border: 1px solid #999999;
+    border: 1px solid var(--dark-grey);
     border-radius: 15px;
 }
 .stage img{
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-around;
     font-size: var(--largefont);
-    color: #999999;
+    color: var(--dark-grey);
     border: 0;
     padding-left:0; margin-left:0;
 }
@@ -32,11 +32,15 @@
 .navbar #nav__toon{
     border-bottom: 4px solid var(--accent-color);
 }
-/*3. 장르 */
-/* .contents__genre{
-    display: none;
-} */
 
+/*3. 장르 */
+.contents__genre button{
+    color: var(--dark-grey);
+}
+
+.genrebar__tab:first-child{
+    color: var(--text-color);
+}
 
 /* 4. 배너 */
 .banner{
