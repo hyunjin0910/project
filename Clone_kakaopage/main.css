@@ -122,11 +122,11 @@
     height: 5em;
 }
 
-/*7. 요일별 웹툰 */
+/*7. 홈> 요일 연재 TOP */
 .daily__contents{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(5,7.2rem);
+    grid-template-rows: repeat(2,12.5rem);
     margin: 1rem 1.5rem;
     column-gap: 1.5rem;
     height: 25rem;
@@ -149,12 +149,30 @@
     color: var(--dark-grey);
 }
 
-/* .days__Mon{
+/* 적용이 안되는 이유는 아마 우선순위 때문인 것 같다 */
+ .days__Mon{
     border-bottom: 4px solid var(--accent-color);
     color: var(--text-color);
-}  */
+} 
 
 .days button:first-child{
     color: var(--text-color);
     border-bottom: 4px solid var(--accent-color);
+}
+
+/*8. 웹툰> 웹툰: 요일별 */
+.w__content{
+    display: flex;
+    margin: 1rem;
+    padding-top: 1rem;
+}
+
+.wc_Image{
+    background-color: red;
+    width: 120px;
+    height: 90px;
+}
+
+.wc_Info{
+    margin: 0.5rem 0 0 1rem;
 }

@@ -17,10 +17,8 @@ function genreClickHandler(event) {
     }
     if(target!=$genrebar){
         document.querySelector(".daily").style.display ='none';
-        document.querySelector(".banner").style.display ='none';
     }else{
         document.querySelector(".daily").style.display ='block';
-        document.querySelector(".banner").style.display ='block';
     }
     curGenre= target;
   }
@@ -48,3 +46,17 @@ function daysClickHandler(event) {
   }
 
 $$days.addEventListener('click',daysClickHandler);
+
+//2) 웹툰 탭을 클릭했을 때 
+function makeWebtoon(){
+    const $webtoon__contents = document.querySelector('.webtoon__contents');
+    const $w__content = document.querySelector('.w__content');
+    let newContent; 
+    let cnt =4;
+    for(let i=0;i<cnt;i++){
+        newContent = $webtoon__contents.append($w__content.cloneNode(true));
+    }
+}
+
+$$genrebar.addEventListener('click',makeWebtoon,{ once : true});
+
