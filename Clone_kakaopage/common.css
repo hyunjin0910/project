@@ -56,9 +56,9 @@ a{
     color: var(--text-color);
 }
 li{
-    background-color: pink;
     cursor: pointer;
     list-style: none;
+    
 }
 button{
     background-color: var(--main-white);
@@ -68,11 +68,11 @@ button{
 }
 
 /* 콘텐츠 bar 양식 */
-.genrebar,.days{
+.genrebar,.days,.wdays{
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     font-size: 1.5rem;
 }
 /* 제목 양식 */
@@ -92,6 +92,6 @@ button{
 }
 
 /* 임시 컨텐츠 숨기기 */
-.category,.waiting{
+.category,.waiting,.webtoon__days{
     display: none;
 }

@@ -8,8 +8,8 @@ const accent = CSSstyle.getPropertyValue('--accent-color');
 const $$genrebar= document.querySelector(".genrebar");
 const $genre__tab= document.querySelector(".genrebar__tab");
 const $banner_image= document.querySelector(".banner__image")
-
 let curGenre = $genre__tab;
+
 function genreClickHandler(event) {
     let target= event.target;
     if(target!=curGenre){
@@ -58,4 +58,5 @@ function daysClickHandler(event) {
 $$days.addEventListener('click',daysClickHandler);
 
 //3. 웹툰> 요일연재 또는 웹툰
+//: 글자색 바꾸기
 const $webtoon__days=document.querySelector(".webtoon__days")

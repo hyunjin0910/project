@@ -139,21 +139,21 @@
     margin-bottom: 1rem;
 }
 
-.daily__contents .content .c_img{
-    height: 70%;
+.c_img{
+    height: 7rem;
     background-color: skyblue;
 }
 
-.days button{
+.days button, .wdays button{
     padding: 0 20px;
     color: var(--dark-grey);
 }
 
-/* 적용이 안되는 이유는 아마 우선순위 때문인 것 같다 */
+/* 적용이 안되는 이유는 아마 우선순위 때문인 것 같다 
  .days__Mon{
     border-bottom: 4px solid var(--accent-color);
     color: var(--text-color);
-} 
+} */
 
 .days button:first-child{
     color: var(--text-color);
@@ -161,18 +161,20 @@
 }
 
 /*8. 웹툰> 웹툰: 요일별 */
+.webtoon{
+    display: none;
+}
 .w__content{
     display: flex;
     margin: 1rem;
-    padding-top: 1rem;
+    padding: 1rem;
 }
 
-.wc_Image{
-    background-color: red;
-    width: 120px;
-    height: 90px;
+.wc_Image img{
+    width: 150px;
+    height: 130px;
 }
 
 .wc_Info{
-    margin: 0.5rem 0 0 1rem;
+    margin: 2rem 0 0 1rem;
 }
