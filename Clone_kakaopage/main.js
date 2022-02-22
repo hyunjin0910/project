@@ -6,26 +6,36 @@ const accent = CSSstyle.getPropertyValue('--accent-color');
 // 1. 장르 선택 시 글씨 색 변경
 //1) 글씨 색 변경
 const $$genrebar= document.querySelector(".genrebar");
-const $genrebar= document.querySelector(".genrebar__tab");
+const $genre__tab= document.querySelector(".genrebar__tab");
 const $banner_image= document.querySelector(".banner__image")
-let curGenre = $genrebar;
+
+let curGenre = $genre__tab;
 function genreClickHandler(event) {
     let target= event.target;
     if(target!=curGenre){
         target.style.color = textcolor;
         curGenre.style.color = darkgrey;
     }
-    if(target!=$genrebar){
+    if(target!=$genre__tab){
         document.querySelector(".daily").style.display ='none';
+        document.querySelector(".webtoon").style.display ='block';
+       if($genre__tab.innerText==='요일연재'||'웹툰'){
+        $webtoon__days.style.display ='block';
+       }
+       else{
+        $webtoon__days.style.display ='none';
+       }
     }else{
         document.querySelector(".daily").style.display ='block';
+        document.querySelector(".webtoon").style.display ='none';
+        $webtoon__days.style.display ='none';
     }
     curGenre= target;
   }
 $$genrebar.addEventListener('click',genreClickHandler);
 
-//2. 요일 연재
-//1) 요일 글씨 색, 밑줄 변화
+//2. 홈> 요일 연재 TOP
+//: 요일 글씨 색, 밑줄 변화
 const $$days= document.querySelector(".days");
 const $days= document.querySelector(".days__Mon");
 const $c_img= document.querySelector(".c_img");
@@ -47,16 +57,5 @@ function daysClickHandler(event) {
 
 $$days.addEventListener('click',daysClickHandler);
 
-//2) 웹툰 탭을 클릭했을 때 
-function makeWebtoon(){
-    const $webtoon__contents = document.querySelector('.webtoon__contents');
-    const $w__content = document.querySelector('.w__content');
-    let newContent; 
-    let cnt =4;
-    for(let i=0;i<cnt;i++){
-        newContent = $webtoon__contents.append($w__content.cloneNode(true));
-    }
-}
-
-$$genrebar.addEventListener('click',makeWebtoon,{ once : true});
-
+//3. 웹툰> 요일연재 또는 웹툰
+const $webtoon__days=document.querySelector(".webtoon__days")
