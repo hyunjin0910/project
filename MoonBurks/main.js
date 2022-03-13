@@ -7,44 +7,52 @@ function typeMenu(){
         .addEventListener('submit',(e)=>{
             e.preventDefault();
         })
+    const addMenu= ()=>{
+        const orderedMenu= $("#menu-name").value;
+        if($("#menu-name").value===""){
+            alert("값을 입력해주세요");
+            return;
+        }
+        const menuTemplate= (orderedMenu)=>{
+        return `
+            <li class="menu-list-item d-flex items-center py-2">
+        <span class="w-100 pl-2 menu-name">${orderedMenu}</span>
+        <button
+            type="button"
+            class="bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button"
+        >
+            수정
+        </button>
+        <button
+            type="button"
+            class="bg-gray-50 text-gray-500 text-sm menu-remove-button"
+        >
+            삭제
+        </button>
+        </li>`
+        }
+        //메뉴 추가하기
+        $("#espresso-menu-list").insertAdjacentHTML('beforeend',menuTemplate(orderedMenu));
+        //메뉴 갯수 세기
+        const menuCount = $("#espresso-menu-list").querySelectorAll("li").length;
+        $(".menu-count").innerText=`총 ${menuCount}개`;
+        //input 초기화
+        $("#menu-name").value="";
+    }
 
     $("#menu-name")
-        .addEventListener('keypress',(e)=>{
-            if(e.key==='Enter'){
-              putMenu();
-            }
-        })
+    .addEventListener('keypress',(e)=>{
+        if(e.key!='Enter'){
+            return;
+        }
+        e.preventDefault();
+        addMenu();
+    })
+    $("#submit-menu-button")
+    .addEventListener('click',(e)=>{addMenu()})
 }
-function putMenu(){
-    const orderedMenu= $("#menu-name").value;
-    const menuTemplate= (orderedMenu)=>{
-    return `
-        <li class="menu-list-item d-flex items-center py-2">
-    <span class="w-100 pl-2 menu-name">${orderedMenu}</span>
-    <button
-      type="button"
-      class="bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button"
-    >
-      수정
-    </button>
-    <button
-      type="button"
-      class="bg-gray-50 text-gray-500 text-sm menu-remove-button"
-    >
-      삭제
-    </button>
-  </li>`
-    }
-    //메뉴 추가하기
-    $("#espresso-menu-list").insertAdjacentHTML('beforeend',menuTemplate(orderedMenu));
-    //메뉴 갯수 세기
-    const menuCount = $("#espresso-menu-list").querySelectorAll("li").length;
-    $(".menu-count").innerText=`총 ${menuCount}개`;
-    //input 초기화
-    $("#menu-name").value="";
-}
+
 
 //함수 실행
 typeMenu()
-
 

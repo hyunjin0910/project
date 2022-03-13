@@ -4,7 +4,7 @@ body{
 }
 .head, .menus, .order{
     width: 500px;
-    margin: 40px auto;
+    margin: 20px auto;
     text-align: center;
 }
 ul{
@@ -13,8 +13,9 @@ ul{
 
 /* Each */
 .head{
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 700;
+    color: darkgreen;
 }
 .order{
     height: 100px;
@@ -31,7 +32,18 @@ ul{
     margin: 0 5px;
     padding: 0 3px;
 }
+.order__title{
+    padding: 20px;
+}
 
+.menu-count{
+    margin-left: 250px;
+}
+
+#menu-name{
+    width: 300px;
+    background-color: rgb(226, 243, 249);
+}
 #espresso-menu-list{
     background-color: white;
 }
