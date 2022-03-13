@@ -35,10 +35,13 @@ function putMenu(){
     </button>
   </li>`
     }
+    //메뉴 추가하기
     $("#espresso-menu-list").insertAdjacentHTML('beforeend',menuTemplate(orderedMenu));
-    
+    //메뉴 갯수 세기
     const menuCount = $("#espresso-menu-list").querySelectorAll("li").length;
     $(".menu-count").innerText=`총 ${menuCount}개`;
+    //input 초기화
+    $("#menu-name").value="";
 }
 
 //함수 실행

@@ -26,8 +26,12 @@ ul{
     justify-content: space-around;
 }
 
-li{
+.menu-type{
     background-color: white;
     margin: 0 5px;
     padding: 0 3px;
+}
+
+#espresso-menu-list{
+    background-color: white;
 }
