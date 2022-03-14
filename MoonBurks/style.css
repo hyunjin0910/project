@@ -11,6 +11,9 @@ ul{
     list-style: none;
 }
 
+button{
+    cursor: pointer;
+}
 /* Each */
 .head{
     font-size: 30px;
@@ -24,13 +27,15 @@ ul{
 
 #menu-list{
     display: flex;
-    justify-content: space-around;
 }
 
 .menu-type{
+    cursor: pointer;
     background-color: white;
+    font-size: 14px;
+    border-radius: 20px;
     margin: 0 5px;
-    padding: 0 3px;
+    padding: 0 7px;
 }
 .order__title{
     padding: 20px;
@@ -53,6 +58,7 @@ ul{
     border-radius: 10px;
     color: white;
     border:transparent;
+    margin-left: 20px;
 }
 #espresso-menu-list{
     background-color: white;
