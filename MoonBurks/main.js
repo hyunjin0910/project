@@ -50,35 +50,44 @@ function typeMenu(){
         addMenu();
     })
     $("#submit-menu-button")
-    .addEventListener('click',(e)=>{addMenu()})
+    .addEventListener('click',addMenu)
 }
 
 
-//함수 실행
-typeMenu()
-
 //메뉴 수정, 삭제
-const statusBtn = $("#espresso-menu-list");
-statusBtn.addEventListener('click',(e)=>
-    {const target=e.target
-    if(target.className==="bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button"){
-        const editted = prompt("메뉴를 수정하세요","수정된 메뉴 이름")
-        target.previousElementSibling.innerText=editted;
-    }
-    else if(target.className==="bg-gray-50 text-gray-500 text-sm menu-remove-button"){
-        const deleteMenu = confirm("메뉴를 삭제하시겠습니까?");
+function updateMenu(){
+    const statusBtn = $("#espresso-menu-list");
+const editMenu = (e)=>{
+    const prevMenu = e.target.previousElementSibling;
+    const editted = prompt("메뉴를 수정하세요",prevMenu.innerText)
+    prevMenu.innerText=editted;
+}
+const delMenu = (e)=>{
+    const deleteMenu = confirm("메뉴를 삭제하시겠습니까?");
         if(deleteMenu===true){
-            target.parentNode.remove();
+            e.target.parentNode.remove();
             const menuCount = $("#espresso-menu-list").querySelectorAll("li").length;
             $(".menu-count").innerText=`총 ${menuCount}개`;
         }
+}
+statusBtn.addEventListener('click',(e)=>
+    {
+    if(e.target.className==="bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button"){
+       editMenu(e);
+    }
+    else if(e.target.className==="bg-gray-50 text-gray-500 text-sm menu-remove-button"){
+        delMenu(e);
     }
     })
-
+// 메뉴 관리 바꾸기
 const menuList = $("#menu-list");
 menuList.addEventListener('click',(e)=>{
-    const target = e.target;
-    if(target.className==="menu-type"){
-        $(".menu-selected").innerText=target.innerText+" 메뉴 관리";
+    if(e.target.className==="menu-type"){
+        $(".menu-selected").innerText=e.target.innerText+" 메뉴 관리";
     }
 })
+}
+
+//함수 실행
+typeMenu()
+updateMenu()
