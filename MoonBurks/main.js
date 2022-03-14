@@ -29,7 +29,8 @@ function typeMenu(){
         >
             삭제
         </button>
-        </li>`
+        </li>
+        `
         }
         //메뉴 추가하기
         $("#espresso-menu-list").insertAdjacentHTML('beforeend',menuTemplate(orderedMenu));
@@ -56,3 +57,11 @@ function typeMenu(){
 //함수 실행
 typeMenu()
 
+const editBtn = $("#espresso-menu-list");
+editBtn.addEventListener('click',(e)=>
+    {const target=e.target
+    if(target.className==="bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button"){
+        const editted = prompt("메뉴를 수정하세요","수정된 메뉴 이름")
+        target.previousElementSibling.innerText=editted;
+    }
+    })

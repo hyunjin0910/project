@@ -42,7 +42,17 @@ ul{
 
 #menu-name{
     width: 300px;
-    background-color: rgb(226, 243, 249);
+    height: 20px;
+    border:transparent;
+    background: rgb(226, 243, 249);
+    border-radius: 10px;
+}
+
+#submit-menu-button{
+    background-color: darkgreen;
+    border-radius: 10px;
+    color: white;
+    border:transparent;
 }
 #espresso-menu-list{
     background-color: white;
