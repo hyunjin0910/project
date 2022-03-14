@@ -57,11 +57,28 @@ function typeMenu(){
 //함수 실행
 typeMenu()
 
-const editBtn = $("#espresso-menu-list");
-editBtn.addEventListener('click',(e)=>
+//메뉴 수정, 삭제
+const statusBtn = $("#espresso-menu-list");
+statusBtn.addEventListener('click',(e)=>
     {const target=e.target
     if(target.className==="bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button"){
         const editted = prompt("메뉴를 수정하세요","수정된 메뉴 이름")
         target.previousElementSibling.innerText=editted;
     }
+    else if(target.className==="bg-gray-50 text-gray-500 text-sm menu-remove-button"){
+        const deleteMenu = confirm("메뉴를 삭제하시겠습니까?");
+        if(deleteMenu===true){
+            target.parentNode.remove();
+            const menuCount = $("#espresso-menu-list").querySelectorAll("li").length;
+            $(".menu-count").innerText=`총 ${menuCount}개`;
+        }
+    }
     })
+
+const menuList = $("#menu-list");
+menuList.addEventListener('click',(e)=>{
+    const target = e.target;
+    if(target.className==="menu-type"){
+        $(".menu-selected").innerText=target.innerText+" 메뉴 관리";
+    }
+})
